@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var i = 0;
+        var listarFilmes = [];
+        listarFilmes[0] = 'https://portalpopline.com.br/wp-content/uploads/2022/11/o-diario-da-princesa.jpg';
+        listarFilmes[1] = 'https://cdn2.storyasset.link/7IqpTP4VMIfCcCmDg3agwlHcBYB3/Peter-Pan-PNG-HD-ms-qdnersuqki.png';
+        listarFilmes[2] = 'https://conteudo.imguol.com.br/c/entretenimento/90/2019/07/17/harry-potter-1563393226252_v2_4x3.png';
+        listarFilmes[3] = 'https://catracalivre.com.br/wp-content/uploads/2021/11/harry-potter-20-anos-910x607.jpg';
+
+
+        while (i < listarFilmes.length ) {
+            document.write("<img src= " + listarFilmes[i] + ">");
+            i++;
+        }
+
+        for (var i = 0; i < listarFilmes.length; i++) {
+            var url = listarFilmes[i];
+            var final = url.substr(-4);
+            if (final != ".jpg") {
+                url += ".jpg";
+                listarFilmes[i] = url;
+            }
+        }
+
+    </script>
+</body>
+</html>
